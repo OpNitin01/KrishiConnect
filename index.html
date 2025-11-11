@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KrishiConnect — Empowering Farmers with AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">KrishiConnect</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#market">Marketplace</a>
+      <a href="#weather">Weather</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div  class="hero">
+      <h1>Empowering Farmers with AI</h1>
+      <p>KrishiConnect connects farmers directly with buyers, predicts crop prices, and gives real-time weather updates.
+        Helping farmers sell smarter and earn more!</p>
+      <button onclick="window.location.href='#features'">Explore Features</button>
+    </div>
+  </section>
+<hr>
+  <section id="features">
+    <h2>Why Choose KrishiConnect?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>🌾 Direct Market Access</h3>
+        <p>Connect with verified buyers without middlemen.</p>
+      </div>
+      <div class="feature">
+        <h3>📊 AI Price Predictions</h3>
+        <p>Predict the best time and rate to sell your crop.</p>
+      </div>
+      <div class="feature">
+        <h3>🌦️ Weather Forecasts</h3>
+        <p>Plan better with future weather and rainfall predictions.</p>
+      </div>
+      <div class="feature">
+        <h3>💬 Easy to Use</h3>
+        <p>Available in local languages and mobile-friendly design.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="market">
+    <h2>Check Your Crop Price</h2>
+    <p>Enter your crop details to get estimated current market prices for your region.</p>
+    <div class="market">
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" id="city" placeholder="Enter your city" required>
+      </div>
+      <div class="form-group">
+        <label>Crop</label>
+        <input type="text" id="crop" placeholder="Enter crop name" required>
+      </div>
+      <div class="form-group">
+        <label>Quantity (in kg)</label>
+        <input type="number" id="quantity" placeholder="Enter quantity" required>
+      </div>
+      <button class="action" onclick="getCropPrice()">Get Price</button>
+      <div id="priceResult"></div>
+    </div>
+  </section>
+
+  <section id="weather">
+    <div class="weather">
+      <h2>Get Weather Forecast</h2>
+      <p>Enter your city and date to get weather details.</p>
+      <div class="form-group" style="width:100%;max-width:500px;">
+        <label>City</label>
+        <input type="text" id="weatherCity" placeholder="Enter city name" required>
+      </div>
+      <div class="form-group" style="width:100%;max-width:500px;">
+        <label>Date</label>
+        <input type="date" id="weatherDate" required>
+      </div>
+      <button class="action" onclick="getWeatherData()">Get Weather</button>
+      <div id="weatherOutput"></div>
+    </div>
+  </section>
+
+  <!-- <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have an idea or feedback? Let's make Indian agriculture smarter together!</p>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button class="send" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section> -->
+
+  <footer>© 2025 KrishiConnect | Made with ❤️ in India for our farmers.</footer>
+<script src="script.js"></script>
+</body>
+
+</html>

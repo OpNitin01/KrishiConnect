@@ -1,0 +1,82 @@
+*{
+  box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth
+}
+    
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#0f2027,#203a43,#2c5364);color:#fff;overflow-x:hidden;
+}
+
+    header{
+      position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);z-index:1000;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;animation:slideDown 1s ease forwards;}
+
+    @keyframes slideDown{from{transform:translateY(-100%);}to{transform:translateY(0);}}
+    .logo{font-weight:700;font-size:26px;color:#16a34a;
+    }
+
+    nav{
+      display:flex;flex-wrap:wrap;gap:16px;
+    }
+
+    nav a{
+      color:#fff;text-decoration:none;margin-left:16px;position:relative;
+    }
+
+    nav a::after{
+      content:'';position:absolute;width:0;height:2px;left:0;bottom:-4px;background:#16a34a;transition:0.3s;
+    }
+
+    nav a:hover::after{
+      width:100%;
+    }
+
+    section
+    {padding:120px 20px;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+    }
+    
+    h1,h2{
+      margin-bottom:20px;
+    }
+    
+    p{max-width:800px;line-height:1.6;margin:auto;font-size:18px;color:#dce2e8;}
+    .hero{background:linear-gradient(120deg,rgba(22,163,74,0.2),rgba(255,255,255,0.05));border-radius:20px;padding:80px 20px;box-shadow:0 0 30px rgba(0,0,0,0.4);animation:fadeIn 2s ease;max-width:1000px;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+    .hero button{margin-top:20px;padding:14px 28px;border:none;border-radius:10px;background:#16a34a;color:#fff;font-size:16px;cursor:pointer;transition:0.3s ease;box-shadow:0 0 15px rgba(22,163,74,0.4);}
+    .hero button:hover{background:#10b981;transform:scale(1.05);}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:60px;width:100%;max-width:1000px;}
+    .feature{background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;box-shadow:0 0 20px rgba(0,0,0,0.3);transition:0.3s ease;cursor:pointer;}
+    .feature:hover{transform:translateY(-10px);background:rgba(22,163,74,0.2);}
+
+    .market{background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(0,0,0,0.4));border-radius:30px;padding:40px;margin-top:40px;width:100%;max-width:900px;}
+    .form-group{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:20px;width:100%;}
+    label{margin-bottom:8px;font-weight:600;}
+    input,select{padding:12px;border:none;border-radius:10px;width:100%;background:rgba(255,255,255,0.1);color:#fff;font-size:16px;}
+    button.action{background:#16a34a;padding:14px 28px;border:none;border-radius:10px;color:#fff;font-size:18px;cursor:pointer;transition:0.3s;width:100%;max-width:300px;margin:auto;}
+    button.action:hover{background:#10b981;transform:translateY(-3px);}
+    #priceResult{margin-top:30px;font-size:20px;color:#16a34a;word-wrap:break-word;}
+
+    .weather{display:flex;flex-direction:column;align-items:center;background:linear-gradient(180deg,rgba(22,163,74,0.2),rgba(255,255,255,0.05));border-radius:30px;padding:40px;width:100%;max-width:900px;box-shadow:0 0 20px rgba(0,0,0,0.4);margin-top:40px;}
+    #weatherOutput{margin-top:30px;font-size:20px;color:#16a34a;word-wrap:break-word;}
+
+    .contact{background:rgba(255,255,255,0.05);border-radius:20px;padding:40px;width:100%;max-width:800px;box-shadow:0 0 20px rgba(0,0,0,0.3);}
+    .contact form{display:flex;flex-direction:column;gap:20px;margin-top:20px;}
+    textarea{padding:14px;border:none;border-radius:10px;resize:none;background:rgba(255,255,255,0.1);color:#fff;font-size:16px;}
+    button.send{background:#16a34a;padding:14px;border:none;border-radius:10px;color:#fff;font-size:18px;cursor:pointer;transition:0.3s;width:100%;max-width:300px;margin:auto;}
+    button.send:hover{background:#10b981;transform:translateY(-3px);}
+
+    footer{text-align:center;padding:40px;color:#aaa;font-size:14px;background:rgba(0,0,0,0.4);margin-top:60px;}
+
+    @media (max-width:768px){
+      header{padding:20px;flex-direction:column;gap:10px;}
+      nav a{margin-left:0;}
+      section{padding:100px 20px;}
+      .hero{padding:60px 20px;}
+      h1{font-size:26px;}
+      p{font-size:16px;}
+    }
